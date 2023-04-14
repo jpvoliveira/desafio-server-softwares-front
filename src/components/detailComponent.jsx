@@ -21,6 +21,10 @@ const Container = styled.div`
     background-color: gray;
     border-radius: 10px;
     padding: 20px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 250px;
 `
 
 export default DetailComponent

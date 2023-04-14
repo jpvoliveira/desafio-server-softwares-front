@@ -13,12 +13,26 @@ function EditComponent({produto, setEditar}){
     return(
         <Container>
             <form onSubmit={handleEdit}>
-                <p>Código: <input type="number" value={newCode} onChange={(e) => setNewCode(e.target.value)}/></p>
-                <p>Descrição: <input type="text" value={newDescription} onChange={(e) => setNewDescription(e.target.value)}/></p>
-                <p>Preco: <input type="text" value={newPrice} onChange={(e) => setNewPrice(e.target.value)}/></p>
-                <p>Data de Cadastro: <input type="text" value={newDate} onChange={(e) => setNewDate(e.target.value)}/></p>
-                <button type="submit">Editar</button>
-                <button onClick={() => setEditar(false)}>Cancelar</button>
+                <Box>
+                    <span>Código</span>
+                    <input type="number" value={newCode} onChange={(e) => setNewCode(e.target.value)}/>
+                </Box>
+                <Box>
+                    <span>Descrição</span>
+                    <input type="text" value={newDescription} onChange={(e) => setNewDescription(e.target.value)}/>
+                </Box>
+                <Box>
+                    <span>Preco</span>
+                    <input type="text" value={newPrice} onChange={(e) => setNewPrice(e.target.value)}/>
+                </Box>
+                <Box>
+                    <span>Data de Cadastro</span>
+                    <input type="text" value={newDate} onChange={(e) => setNewDate(e.target.value)}/>
+                </Box>
+                <BoxButton>
+                    <button type="submit">Editar</button>
+                    <button onClick={() => setEditar(false)}>Cancelar</button>
+                </BoxButton>
             </form>
         </Container>
     )
@@ -40,10 +54,32 @@ function EditComponent({produto, setEditar}){
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    justify-content: center;
     background-color: gray;
     border-radius: 10px;
     padding: 20px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 250px;
+`
+
+const BoxButton = styled.div`
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+`
+
+const Box = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    input{
+        width: auto;
+        height: 20px;
+        text-align: center;
+    }
 `
 
 export default EditComponent;

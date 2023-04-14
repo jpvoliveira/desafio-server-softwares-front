@@ -20,6 +20,15 @@ export async function editarProduto(setEditar, _id, body) {
     }
 };
 
+export async function registrarProduto(setIsOpen, body) {
+    try {
+        await axios.post(`${API_URL}/produtos`, body);
+        setIsOpen(false)
+    } catch (error) {
+        console.error('Erro ao atualizar objeto:', error);
+    }
+};
+
 export async function deletarProduto(setDeletar, _id) {
     try {
         await axios.delete(`${API_URL}/produtos/${_id}`);
