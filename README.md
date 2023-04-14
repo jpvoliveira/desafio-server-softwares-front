@@ -5,7 +5,7 @@
 Criar uma tela que exiba os produtos cadastrados em uma API, que permita realizar a inclusão, edição, exclusão dos produtos e tenha a opção de 
 visualizar os detalhes do mesmo.
 
-## Para rodar a API em sua maquina local
+## Para rodar a aplicação em sua maquina local
 
 - Ao baixar o repositório abra o terminal na raiz do mesmo e inicie com o comando 'npm i'
 - No terminal digite o comando 'npm run dev' e sera gerado um link
